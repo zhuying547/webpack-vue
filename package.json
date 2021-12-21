@@ -1,0 +1,26 @@
+{
+  "name": "junior-webpack-vue",
+  "version": "1.0.0",
+  "description": "Build vue project via webpack v5",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhuying547/junior-webpack-vue.git"
+  },
+  "keywords": [],
+  "author": "zhuying <zhuying547@qq.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhuying547/junior-webpack-vue/issues"
+  },
+  "homepage": "https://github.com/zhuying547/junior-webpack-vue#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  }
+}

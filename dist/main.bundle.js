@@ -1,0 +1,1 @@
+(()=>{"use strict";function e(){console.log("Hello World")}document.body.appendChild(function(){const n=document.createElement("button");return n.innerHTML="See Console",n.addEventListener("click",e),n}())})();
