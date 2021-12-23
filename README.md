@@ -62,3 +62,30 @@ import 'vue-loader/template-loader!pug-loader!vue-loader!source.vue?vue&type=tem
 import 'style-loader!css-loader!vue-loader/style-post-loader!sass-loader!vue-loader!source.vue?vue&type=style&index=1&scoped&lang=scss'
 ```
 
+### css-loader
+
+`css-loader` 把 CSS 块中的 `@import` 和 `url()` 转换为 `import/require()` 引入（配合 webpack 吗？），然后 resolve them。
+
+> 将 css 模块中的资源 URL 转换为 webpack 的模块请求。
+
+把 CSS 提取为一个单独的文件（不把 css 代码写进 js 中），
+
+### vue-style-loader
+
+fork based on style-loader，在 css-loader 转换后在使用，用处是通过 style tag 把 css 代码注入到 document 中。
+
+### postcss-loader
+
+`<style scoped>` 只作用于**当前组件中**的元素，这是借助 postcss 实现的。
+
+- 子组件的根节点会受到父组件 scoped CSS 的影响。
+- 深度作用选择器：`>>>`、`/deep/`、`::v-deep` 。
+- 动态生成的内容 `v-html`：不受 scoped 的影响。
+
+> - scoped 样式不能完全代替 class：`<style scoped>p {color: red}</style>` 会带来性能上的影响，建议使用：`<style scoped>.title{}</style>`
+> - 注意递归组件的影响
+
+### 热重载
+
+热重载会在 `webpack-dev-server --hot` 时自动开启。
+
