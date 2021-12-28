@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/zhuying547/junior-webpack-vue#readme",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
     "html-webpack-plugin": "^5.5.0",
     "less": "^4.1.2",

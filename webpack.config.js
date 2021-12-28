@@ -23,6 +23,16 @@ module.exports = {
       {
         test: /\.less$/,
         use: ['vue-style-loader', 'css-loader', 'less-loader']
+      },
+      {
+        test: /\.js$/,
+        // v15 开始把从 node_modules 中引入的 vue 文件中的 js 语言块不使用 babel-loader 了
+        loader: 'babel-loader',
+        // 这里的 file 参数值又是什么
+        exclude: file => (
+          /node_modules/.test(file) &&
+          !/\.vue\.js/.test(file)
+        )
       }
     ]
   },
